@@ -131,6 +131,7 @@ public class RabbitMQConfig {
 			}
 
 			logger.info("send message failed: " + replyCode + " " + replyText);
+			//消息丢队列失败，可以制定处理方案，比如重发消息
 		});
 		return template;
 	}
